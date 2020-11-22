@@ -16,9 +16,9 @@ jobs:
         path: "tf-provider-secberus"
 
     - name: log in to gcp
-      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@master
       with:
-        service_account_key: ${{ secrets.GCS_TERRAFORM_GITHUB_SA }}
+        service_account_key: ${{ secrets.GCS_SA_KEY }}
         export_default_credentials: true
 
     - name: setup terraform
