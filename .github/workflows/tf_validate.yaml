@@ -1,6 +1,6 @@
 name: tf_validate
 
-on: push:
+on: push
 
 jobs:
   build:
