@@ -1,4 +1,4 @@
-name: tf_apply
+name: tf_validate
 
 on: push
 
