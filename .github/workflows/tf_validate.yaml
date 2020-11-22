@@ -1,9 +1,6 @@
 name: tf_validate
 
-on: 
-  push:
-    branches:
-      - master
+on: push:
 
 jobs:
   build:
@@ -41,5 +38,3 @@ jobs:
         terraform init
         terraform validate
         terraform plan
-        terraform apply -auto-approve
-      
