@@ -1,0 +1,14 @@
+with GCP.compute {
+    foreach jp"projects[].firewalls.items[]" {
+        allows_ssh = jp"allowed[?IPProtocol == 'tcp' && ports && contains(ports, '22')]"
+        bad_sources = jp"sourceRanges[?!contains(['10.0.3.0/24'], @)]"
+        if (direction == "INGRESS") and (not disabled) and allows_ssh and bad_sources {
+            alert({
+                firewall_name: name,
+                firewall_id: id,
+                network_name: network,
+                targets: targetTags
+            })
+        }
+    }
+}
