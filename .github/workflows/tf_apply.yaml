@@ -9,7 +9,7 @@ jobs:
     - name: clone tf source repo
       uses: actions/checkout@v2
 
-    - name: clone tf source repo
+    - name: clone tf provider secberus repo
       uses: actions/checkout@v2
       with:
         repository: RexBelli/terraform-provider-secberus

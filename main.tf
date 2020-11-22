@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket  = "tf-secberus-state"
+    bucket  = "tf-state-secberus"
     prefix  = "terraform/state"
   }
 }
