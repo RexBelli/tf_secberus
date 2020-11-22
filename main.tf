@@ -7,7 +7,6 @@ terraform {
   }
 
   backend "gcs" {
-    project = "tensile-reducer"
     bucket  = "tf-secberus-state"
     prefix  = "terraform/state"
   }
